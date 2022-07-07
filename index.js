@@ -23,6 +23,7 @@ $('.btn').click(function() {
   checkAnswer(userClickedPattern.length-1);
 });
 
+
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("success");
@@ -41,8 +42,9 @@ function checkAnswer(currentLevel) {
 
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
-    
+
     console.log("wrong");
+    startOver();
   }
   };
 
@@ -71,4 +73,10 @@ function animatePress(currentColor) {
   setTimeout(function() {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
+};
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 };
