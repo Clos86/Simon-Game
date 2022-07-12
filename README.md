@@ -1,6 +1,6 @@
 # Simon Game
 
-This was a challenge to create a Simom-like memory game using jQuery.
+This was a challenge to create a Simon-like memory game using jQuery.
 
 ## Table of Contents
 
